@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aceros Suapi | Acero y materiales para la construcción en Guadalajara</title>
+<meta name="description" content="Venta de acero y materiales para la construcción en Guadalajara, Jalisco: vigas, PTR, canales, ángulos, placas, láminas y acero inoxidable. Cotiza al día por WhatsApp. Envíos a todo Jalisco.">
+<style>
+  :root{
+    --azul:#1d4ed8;
+    --azul-oscuro:#1e40af;
+    --grafito:#1f2937;
+    --gris:#6b7280;
+    --gris-claro:#e5e7eb;
+    --fondo:#f3f4f6;
+    --blanco:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--fondo);
+    color:var(--grafito);
+    line-height:1.6;
+  }
+  a{text-decoration:none;color:inherit;}
+
+  /* ===== Franja legal superior ===== */
+  .barra-legal{
+    background:var(--grafito);
+    color:var(--blanco);
+    font-size:.78rem;
+    letter-spacing:.04em;
+    text-align:center;
+    padding:.5rem 1rem;
+  }
+  .barra-legal strong{color:var(--gris-claro);}
+
+  /* ===== Encabezado ===== */
+  header{
+    background:var(--blanco);
+    border-bottom:1px solid var(--gris-claro);
+    position:sticky;top:0;z-index:50;
+  }
+  .header-interno{
+    max-width:1100px;margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:1rem;padding:.9rem 1.25rem;flex-wrap:wrap;
+  }
+  .logo{display:flex;align-items:center;gap:.7rem;}
+  .logo svg{width:44px;height:44px;}
+  .logo .nombre{font-weight:800;font-size:1.05rem;line-height:1.15;letter-spacing:.02em;}
+  .logo .nombre span{color:var(--azul);}
+  .logo .sub{font-size:.7rem;color:var(--gris);letter-spacing:.14em;text-transform:uppercase;}
+
+  .contacto-header{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+  .telefono{font-weight:700;font-size:1.05rem;}
+  .telefono small{display:block;font-weight:400;font-size:.7rem;color:var(--gris);letter-spacing:.12em;text-transform:uppercase;}
+  .btn-wa{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:var(--azul);color:var(--blanco);
+    font-weight:700;font-size:.9rem;
+    padding:.6rem 1.1rem;border-radius:4px;
+    transition:background .2s;
+  }
+  .btn-wa:hover{background:var(--azul-oscuro);}
+  .btn-wa svg{width:18px;height:18px;fill:currentColor;}
+
+  nav{
+    max-width:1100px;margin:0 auto;padding:0 1.25rem .6rem;
+    display:flex;gap:1.5rem;flex-wrap:wrap;
+  }
+  nav a{font-size:.85rem;font-weight:600;color:var(--gris);text-transform:uppercase;letter-spacing:.08em;}
+  nav a:hover{color:var(--azul);}
+
+  /* ===== Portada ===== */
+  .portada{
+    background:linear-gradient(180deg,var(--grafito) 0%,#374151 100%);
+    color:var(--blanco);
+    padding:5rem 1.25rem;
+    text-align:center;
+  }
+  .portada h1{
+    font-size:clamp(1.9rem,5vw,3.2rem);
+    font-weight:800;letter-spacing:.01em;
+    max-width:820px;margin:0 auto 1rem;
+  }
+  .portada h1 span{color:#93c5fd;}
+  .portada p{max-width:640px;margin:0 auto 2rem;color:var(--gris-claro);font-size:1.05rem;}
+  .portada .btn-wa{font-size:1rem;padding:.85rem 1.6rem;}
+
+  /* ===== Secciones ===== */
+  section{max-width:1100px;margin:0 auto;padding:3.5rem 1.25rem;}
+  .titulo-seccion{
+    font-size:1.6rem;font-weight:800;margin-bottom:.4rem;
+  }
+  .titulo-seccion::after{
+    content:"";display:block;width:56px;height:4px;
+    background:var(--azul);margin-top:.5rem;border-radius:2px;
+  }
+  .intro{color:var(--gris);max-width:640px;margin-bottom:2rem;}
+
+  /* ===== Materiales ===== */
+  .grid-materiales{
+    display:grid;gap:1rem;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  }
+  .material{
+    background:var(--blanco);
+    border:1px solid var(--gris-claro);
+    border-top:4px solid var(--azul);
+    border-radius:4px;
+    padding:1.4rem;
+  }
+  .material h3{font-size:1.05rem;font-weight:800;margin-bottom:.35rem;}
+  .material p{font-size:.9rem;color:var(--gris);}
+  .material.mas{
+    background:var(--grafito);color:var(--blanco);
+    border-top-color:#93c5fd;
+    display:flex;flex-direction:column;justify-content:center;
+  }
+  .material.mas p{color:var(--gris-claro);}
+
+  .nota-cotiza{
+    margin-top:1.5rem;
+    background:var(--blanco);
+    border-left:4px solid var(--azul);
+    padding:1rem 1.25rem;
+    font-size:.95rem;color:var(--gris);
+    border-radius:0 4px 4px 0;
+  }
+
+  /* ===== Ubicación ===== */
+  .ubicacion{
+    background:var(--blanco);
+    border-top:1px solid var(--gris-claro);
+    border-bottom:1px solid var(--gris-claro);
+  }
+  .ubicacion .contenido{
+    max-width:1100px;margin:0 auto;padding:3rem 1.25rem;
+    display:flex;gap:2.5rem;flex-wrap:wrap;align-items:center;
+  }
+  .ubicacion h2{font-size:1.4rem;font-weight:800;margin-bottom:.5rem;}
+  .ubicacion p{font-size:1.05rem;color:var(--gris);}
+  .ubicacion .frase{font-weight:700;color:var(--grafito);}
+
+  /* ===== Contacto ===== */
+  .contacto{text-align:center;}
+  .contacto h2{font-size:1.6rem;font-weight:800;margin-bottom:.5rem;}
+  .contacto p{color:var(--gris);margin-bottom:1.5rem;}
+  .contacto .telefono-grande{
+    font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;color:var(--grafito);
+    display:block;margin-bottom:1.25rem;
+  }
+
+  /* ===== Pie ===== */
+  footer{
+    background:var(--grafito);color:var(--gris-claro);
+    padding:2.5rem 1.25rem;text-align:center;font-size:.85rem;
+  }
+  footer .legal{margin-bottom:.75rem;letter-spacing:.04em;}
+  footer a{color:#93c5fd;}
+  footer a:hover{text-decoration:underline;}
+  footer .copy{margin-top:1rem;color:var(--gris);font-size:.78rem;}
+
+  /* ===== Política de privacidad ===== */
+  .privacidad{max-width:820px;}
+  .privacidad h2{font-size:1.15rem;margin:1.75rem 0 .4rem;}
+  .privacidad p, .privacidad li{font-size:.95rem;color:var(--gris);}
+  .privacidad ul{padding-left:1.25rem;}
+
+  @media (max-width:640px){
+    .header-interno{justify-content:center;text-align:center;}
+    .contacto-header{justify-content:center;}
+  }
+</style>
+</head>
+<body>
+
+<!-- Franja legal superior -->
+<div class="barra-legal">
+  SITIO WEB OPERADO POR: <strong>SUMINISTROS DE ACERO PARA LA INDUSTRIA. RFC: SAI881202TW3.</strong>
+  &nbsp;|&nbsp; VENTAS: <strong>33 2246 9967</strong>
+</div>
+
+<!-- Encabezado -->
+<header>
+  <div class="header-interno">
+    <a class="logo" href="#inicio" aria-label="Aceros Suapi">
+      <!-- Logotipo: perfil de acero -->
+      <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo">
+        <rect x="4" y="6" width="40" height="8" rx="1.5" fill="#1f2937"/>
+        <rect x="4" y="34" width="40" height="8" rx="1.5" fill="#1f2937"/>
+        <rect x="20" y="14" width="8" height="20" fill="#1d4ed8"/>
+      </svg>
+      <span>
+        <span class="nombre">ACEROS SUAPI<br><span>SUMINISTROS DE ACERO</span></span>
+        <span class="sub">Acero y materiales para la construcción</span>
+      </span>
+    </a>
+    <div class="contacto-header">
+      <a class="telefono" href="tel:+523322469967">
+        <small>Ventas</small>
+        33 2246 9967
+      </a>
+      <a class="btn-wa" href="https://wa.me/523322469967" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5s0-.4 0-.5c-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1 2.6c.1.2 1.8 2.7 4.3 3.8.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#materiales">Materiales</a>
+    <a href="#ubicacion">Ubicación</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#privacidad">Política de privacidad</a>
+  </nav>
+</header>
+
+<!-- Portada -->
+<section class="portada" id="inicio">
+  <h1>Acero y materiales para la construcción <span>en Guadalajara</span></h1>
+  <p>Vigas, PTR, canales, ángulos, placas, láminas, acero inoxidable y muchos más materiales. Cotiza al día por WhatsApp, sin compromiso.</p>
+  <a class="btn-wa" href="https://wa.me/523322469967" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5s0-.4 0-.5c-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1 2.6c.1.2 1.8 2.7 4.3 3.8.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
+    Cotizar por WhatsApp
+  </a>
+</section>
+
+<!-- Materiales -->
+<section id="materiales">
+  <h2 class="titulo-seccion">Materiales que manejamos</h2>
+  <p class="intro">Estos son los materiales con los que trabajamos. El precio del acero cambia con el tiempo, por eso cada cotización se hace al día.</p>
+  <div class="grid-materiales">
+    <div class="material"><h3>Vigas</h3><p>Vigas de acero para estructuras y obras de construcción.</p></div>
+    <div class="material"><h3>PTR</h3><p>Perfil tubular rectangular en distintas medidas y calibres.</p></div>
+    <div class="material"><h3>Canales</h3><p>Canales de acero para estructuras, marcos y soportes.</p></div>
+    <div class="material"><h3>Ángulos</h3><p>Ángulos de acero para refuerzos, marcos y herrería.</p></div>
+    <div class="material"><h3>Placas</h3><p>Placas de acero en diferentes espesores.</p></div>
+    <div class="material"><h3>Láminas</h3><p>Láminas de acero para techos, cubiertas y fabricación.</p></div>
+    <div class="material"><h3>Acero inoxidable</h3><p>Material en acero inoxidable para usos especiales.</p></div>
+    <div class="material mas"><h3>Y muchos más materiales</h3><p>Pregunta por el material que necesitas: si es de acero, lo conseguimos.</p></div>
+  </div>
+  <p class="nota-cotiza">El precio del acero se cotiza al día. Escríbenos por WhatsApp al <strong>33 2246 9967</strong> y te damos precio y disponibilidad en ese momento.</p>
+</section>
+
+<!-- Ubicación -->
+<div class="ubicacion" id="ubicacion">
+  <div class="contenido">
+    <div>
+      <h2>¿Dónde estamos?</h2>
+      <p class="frase">Nos ubicamos en Guadalajara, Jalisco.</p>
+      <p class="frase">Envíos a todo Jalisco.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Contacto -->
+<section class="contacto" id="contacto">
+  <h2>Cotiza tu material hoy</h2>
+  <p>Llámanos o mándanos mensaje por WhatsApp y te cotizamos al momento.</p>
+  <a class="telefono-grande" href="tel:+523322469967">33 2246 9967</a>
+  <a class="btn-wa" href="https://wa.me/523322469967" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5s0-.4 0-.5c-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1 2.6c.1.2 1.8 2.7 4.3 3.8.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
+    Enviar WhatsApp
+  </a>
+</section>
+
+<!-- Política de privacidad -->
+<section class="privacidad" id="privacidad">
+  <h2 class="titulo-seccion">Política de privacidad</h2>
+  <p><strong>Aceros Suapi</strong> (Suministros de Acero para la Industria, RFC: SAI881202TW3), ubicada en Guadalajara, Jalisco, es responsable del tratamiento de tus datos personales.</p>
+  <h2>1. Datos que recabamos</h2>
+  <p>Cuando nos contactas por teléfono o WhatsApp podemos recabar: nombre, número de teléfono y los datos del material que deseas cotizar.</p>
+  <h2>2. Uso de los datos</h2>
+  <p>Los datos se utilizan únicamente para atender tu solicitud, cotizar materiales y dar seguimiento a tu compra o envío.</p>
+  <h2>3. Compartición de datos</h2>
+  <p>No vendemos ni compartimos tus datos personales con terceros, salvo que sea necesario para realizar la entrega de tu material o por requerimiento de autoridad competente.</p>
+  <h2>4. Derechos ARCO</h2>
+  <p>Puedes ejercer tus derechos de Acceso, Rectificación, Cancelación u Oposición (ARCO) escribiéndonos por WhatsApp al 33 2246 9967.</p>
+  <h2>5. Cambios a esta política</h2>
+  <p>Cualquier cambio a esta política de privacidad se publicará en este mismo sitio web.</p>
+</section>
+
+<!-- Pie de página -->
+<footer>
+  <p class="legal">SITIO WEB OPERADO POR: SUMINISTROS DE ACERO PARA LA INDUSTRIA. RFC: SAI881202TW3.</p>
+  <p>Ventas: <a href="tel:+523322469967">33 2246 9967</a> &nbsp;|&nbsp; <a href="https://wa.me/523322469967" target="_blank" rel="noopener">WhatsApp</a> &nbsp;|&nbsp; <a href="#privacidad">Política de privacidad</a></p>
+  <p>Nos ubicamos en Guadalajara, Jalisco. Envíos a todo Jalisco.</p>
+  <p class="copy">© Aceros Suapi. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
